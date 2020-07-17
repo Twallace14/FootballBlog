@@ -1,0 +1,35 @@
+.external-links{
+  text-decoration: none;
+display: flex;
+  
+  
+  .optionslinks {
+   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+  
+    text-decoration: none;
+  
+  
+      
+  
+      .x-option {
+        padding: 10px 10px;
+        text-decoration: none;
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        
+  
+        
+    
+            &:hover {
+              transform: scale(1.1);
+              color: black;
+            }
+      }
+    }
+}

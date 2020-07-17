@@ -1,0 +1,42 @@
+@mixin mobile {
+    @media only screen and (max-width:800px){
+        @content;
+    }
+    
+}
+
+@font-face{
+    src: url(../assets/fonts/SpecialEliteRegular.ttf);
+    font-family: RabonaPrint;
+}
+
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: RabonaPrint;
+    color: white;
+    margin: auto;
+    padding: unset;
+    overflow: hidden;
+    background: linear-gradient(30deg, rgb(236,0,36), transparent),
+    rgb(206,0,65) repeating-linear-gradient(30deg, rgb(17,52,96) 0%, rgb(17,52,124) 5%, transparent 5%, transparent 10%, rgb(153,130,76) 9%, rgb(17,52,124) 8%, transparent 5%, );
+    
+
+    .reportlist-container {
+        height: 100vh;
+        
+
+    }
+
+}
+
+@media only screen and (min-width:798px){
+    .dashboard{
+        width: 75vw;
+        height: 100vh;
+     
+        box-shadow:0 40px 4px rgba(44, 1, 1, 0.3), 0 0 40px rgba(41, 1, 1, 0.8) ;
+  
+    }
+}

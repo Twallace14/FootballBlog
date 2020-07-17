@@ -1,0 +1,142 @@
+@font-face{
+    src: url(../assets/fonts/SpecialEliteRegular.ttf);
+    font-family: RabonaPrint;
+}
+
+@font-face{
+    src: url(../assets/fonts/OpenSansCondensed-Light.ttf);
+    font-family: regularRabona;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0.8rem 1 rem ;
+    background: #bb0041;
+    font-family: moyko;
+    border: solid 5px #ce0041;
+    color: #ce0041;
+    width: 100vw;
+    min-width: 20rem;
+    max-width: 22rem;
+
+    margin: 2%;
+
+    
+
+    .img-container{
+        height: 20rem;
+        position: relative;
+        z-index: 1;
+        padding-top: 2%;
+        overflow: hidden;
+        background: #C3B0A3;
+
+    
+
+        .canvas{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -2;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+          
+               
+    
+                }
+        
+
+        }
+
+        .card-info{
+            font-family: RabonaPrint;
+            font-size: 0.9rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            padding: 1.8%;
+            color: #113476;
+            
+            .date{
+                text-align: start;
+            }
+            .author{
+                text-align: end;
+            }
+
+
+        }
+    }
+    .report-information{
+        padding: 2rem 2.7rem;
+        position: relative;
+        background: #ce0041;
+        color: white;
+        font-family: regularRabona;
+        font-size: 1.3rem;
+
+        .report_title{
+            text-transform: capitalize;
+            font-family: RabonaPrint;
+        }
+    }
+}
+
+
+@media only screen and (min-width:798px){
+    .card{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75vw;
+        min-width: unset;
+        max-width: unset;
+        
+        
+
+        .img-container{
+            height: unset;
+            padding: unset;
+            
+            .card-info{
+                font-size: 0.9rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            justify-content: unset;
+        
+            .date{
+                text-align: start;
+            
+            
+            }
+            .author{
+                text-align: start;
+                grid-row-start: 6;
+                align-items: end;
+                
+            }
+        }
+            
+        }
+        
+
+        .report-information{
+            flex-basis: 89%;
+            align-self: center;
+            text-align: start;
+           
+       
+            
+        }
+    }
+}

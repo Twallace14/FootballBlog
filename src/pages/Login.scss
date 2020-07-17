@@ -1,0 +1,42 @@
+@font-face {
+    font-family: rabonareport;
+    src: url(../assets/fonts/SpecialEliteRegular.ttf);
+  }
+
+.sign-in{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+ 
+    justify-content: center;
+    margin: auto;
+
+    background: linear-gradient(30deg, rgb(206, 0, 65), transparent),
+    rgb(236, 0, 36) repeating-linear-gradient(30deg, rgb(206, 0, 65) 0%, rgb(236, 0, 36) 5%, transparent 5%, transparent 10% );
+    font-family: rabonareport;
+
+}
+
+.title{
+    margin: 10px 0px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+@media only screen and (min-width:798px){
+    .sign-in{
+        width: 75vw;
+        height: 100vh;
+        box-shadow:0 40px 4px rgba(44, 1, 1, 0.3), 0 0 40px rgba(41, 1, 1, 0.8) ;
+    }
+}

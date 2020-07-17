@@ -1,0 +1,70 @@
+@font-face{
+  src: url(../assets/fonts/SpecialEliteRegular.ttf);
+  font-family: moyko;
+}
+
+.header {
+    height: 7vh;
+    font-family: moyko;
+   
+    display: flex;
+    justify-content: space-between;
+  
+    background: rgb(89,78,53);
+    background: linear-gradient(0deg, rgba(89,78,53,1) 0%, rgba(115,102,72,1) 2%, rgba(153,130,76,1) 7%, rgba(153,130,76,1) 15%, rgba(175,149,90,1) 46%, rgba(153,130,76,1) 65%, rgba(115,102,72,1) 97%, rgba(61,53,36,1) 100%);
+    
+    border-bottom: #9c824a;
+    overflow: scroll;
+  
+    .logo-container {
+      height: 7vh;
+      width: 7vh;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-content: center;
+      margin-left: 0.7rem;
+      background: white;
+      border: solid 3px #9c824a;
+      border-radius: 100%;
+
+      
+ 
+        .logo{
+          height: 75%;
+         
+          object-fit: contain;
+
+            
+        
+                &:hover {
+                transform: scale(1.4);
+                color: black;
+                }
+        }
+    }
+  
+    .options {
+  
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      
+      
+      
+  
+      .option {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: white;
+
+        
+    
+            &:hover {
+              transform: scale(1.4);
+              color: black;
+            }
+      }
+    }
+  }

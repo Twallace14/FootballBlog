@@ -5,6 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  background: linear-gradient(291deg, #ce0041, #ec0024, #ce0041);
+  background-size: 600% 600%;
+  
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
+  }
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 20%}
+      50%{background-position:100% 81%}
+      100%{background-position:0% 20%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 20%}
+      50%{background-position:100% 81%}
+      100%{background-position:0% 20%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 20%}
+      50%{background-position:100% 81%}
+      100%{background-position:0% 20%}
+  
+
 }
 
 code {
