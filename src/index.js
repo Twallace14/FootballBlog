@@ -7,16 +7,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './Store/Reducers/rootReducer'
 import { Provider, useSelector } from 'react-redux';
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
 import { getFirestore, reduxFirestore, createFirestoreInstance } from 'redux-firestore';
 import { getFirebase, ReactReduxFirebaseProvider, isLoaded } from 'react-redux-firebase';
 import firebaseConfig from './Firebase/fbConfig'
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
+import logger from "redux-logger";
 
 const store = createStore(
     rootReducer,
     compose(
-        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore }), logger ),
         reduxFirestore(firebaseConfig),
 
     )

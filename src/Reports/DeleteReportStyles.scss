@@ -1,0 +1,63 @@
+
+
+@font-face {
+    font-family: rabonareport;
+    src: url(../assets/fonts/SpecialEliteRegular.ttf);
+  }
+@font-face{
+    src: url(../assets/fonts/OpenSansCondensed-Light.ttf);
+    font-family: regularRabona;}
+
+span, p{
+    font-family: regularRabona;
+}
+
+.delete-report-container{
+    background-color: rgb(226, 222, 222);
+    width: 75%;
+    margin: auto;
+    margin-top: 3%;
+    height: 100vh;
+    overflow: scroll;
+    font-family: rabonareport;
+  
+    .report-slim-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid 3px red;
+        height: 14%;
+        background: white;
+        margin: 3%;
+        text-align: start;
+        align-items: center;
+        overflow: hidden;
+
+        
+        
+        .report-check{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 85%;
+        
+        }
+
+        .delete-button-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 100%;
+            align-items: center;
+            width:15%;
+            border-left: 5px double red;
+          
+        }
+
+        img{
+            cursor: pointer;
+        }
+    }
+}

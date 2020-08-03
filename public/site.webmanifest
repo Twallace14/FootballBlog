@@ -1,0 +1,14 @@
+{
+    "name": "rabona report",
+    "short_name": "rabona report",
+    "icons": [
+        {
+            "src": "/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#710404",
+    "background_color": "#710404",
+    "display": "standalone"
+}

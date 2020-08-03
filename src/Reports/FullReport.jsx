@@ -12,7 +12,7 @@ function FullReport(props) {
 
 
 
-    const { report, id} = props;
+    const { report} = props;
     
 
 
@@ -27,8 +27,7 @@ function FullReport(props) {
 
 
 
-        const head = 'share it';
-    const url = `http://rabonareport.com/article/${id}`
+    
 
 
         return (

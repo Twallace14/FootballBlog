@@ -1,0 +1,48 @@
+@font-face{
+    src: url(../assets/fonts/SpecialEliteRegular.ttf);
+    font-family: RabonaPrint;
+}
+
+@font-face{
+    src: url(../assets/fonts/OpenSansCondensed-Light.ttf);
+    font-family: regularRabona;
+}
+
+.admin-container{
+    margin-top: none;
+    background: linear-gradient(30deg, rgb(17,52,96), transparent),
+    rgb(206,0,65) repeating-linear-gradient(30deg, rgb(17,52,96) 0%, rgb(17,52,124) 5%, transparent 5%, transparent 10%, rgb(153,130,76) 9%, rgb(17,52,124) 8%, transparent 5%, );
+    padding-top: 2rem;
+    color: white;
+    font-family: RabonaPrint;
+    padding-bottom: 7rem;
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    .admin-details-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        border: solid 3px red;
+        width: 100%;
+        margin: 2%;
+        height: 100%;
+        overflow: scroll;
+
+    }
+  
+}
+
+@media only screen and (min-width:798px){
+    .admin-container{
+        width: 75vw;
+        height: 100vh;
+        margin: auto;
+        box-shadow:0 40px 4px rgba(44, 1, 1, 0.3), 0 0 40px rgba(41, 1, 1, 0.8) ;
+    }
+}

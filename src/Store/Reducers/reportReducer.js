@@ -15,7 +15,7 @@ const reportReducer = (
             return state;
         case 'ADD_REPORT_ERR':
             console.log('added report err', action.err);
-            alert('something went worong');
+            alert('something went wrong');
             return state;
         default: return state
     }

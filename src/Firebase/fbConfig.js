@@ -53,7 +53,18 @@ const firebaseConfig = {
     return reportRef;
   }
 
+  export const deleteReports = async(report) => {
+    const collectionRef = firestore.collection("articles")
+    collectionRef.doc(report).delete().then(function() {
+      console.log("Document successfully deleted!");
+  }).catch(function(error) {
+      console.error("Error removing document: ", error);
+  });
+  }
+
   export const auth = firebase.auth();
   export const firestore = firebase.firestore();
+
+  
 
   export default firebase;

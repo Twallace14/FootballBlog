@@ -18,8 +18,8 @@ class ArticlesPage extends Component {
     }
 
     componentDidMount() {
-        const { reportInfo } = this.props
-        console.log(reportInfo);
+       
+      
 
     }
 
@@ -35,7 +35,6 @@ class ArticlesPage extends Component {
 
         
         const { reportInfo } = this.props
-        console.log(reportInfo);
         const text = this.state.searchField
 
 

@@ -6,37 +6,20 @@ import { connect } from 'react-redux';
 import { compileReport } from '../Store/Actions/reportAction'
 import './CreateReportStyles.scss'
 
-
-const formValid = formErrors => {
-    let valid = true;
-
-    Object.values(formErrors).forEach(valid => {
-        valid.length > 0 && (valid = false);
-    });
-}
-
 class CreateReport extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: null,
-            category: null,
-            reportOutline: null,
-            report: null,
-            formErrors: {
-                title: '',
-                category: '',
-                reportOutline: '',
-                report: ''
-
-            }
+            title: ' ',
+            category: ' ',
+            reportOutline: ' ',
+            report: ' ',
         };
     }
 
 
     handleSubmit = event => {
         event.preventDefault();
-        if (formValid(this.state.formErrors)) {
             this.props.compileReport(this.state)
             this.setState({
                 title: ' ',
@@ -46,51 +29,16 @@ class CreateReport extends React.Component {
             }
             )
 
-        } else {
-            alert('try again')
-        };
-
-
-
-
-
-
-
-
-
     };
 
     handleChange = event => {
         const { value, name } = event.target;
-        let formErrors = this.state.formErrors;
 
-        switch (name) {
-            case 'title':
-                formErrors.title = value.length < 3 ? "please enter your report title" : "";
-                break;
-            case 'reportOutline':
-                formErrors.reportOutline = value.length < 3 ? "please enter report summary" : "";
-                break;
-            case 'category':
-                formErrors.category = value.length < 3 ? "please select a category" : "";
-                break;
-            case 'report':
-                formErrors.report = value.length < 3 ? "please enter report" : "";
-                break;
-            default:
-                break;
-        }
 
-        this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+        this.setState({ [name]: value });
     };
 
-
-
-
     render() {
-
-
-
 
         return (
             <div className="create-report">
@@ -105,26 +53,21 @@ class CreateReport extends React.Component {
                         name='title'
                         type="text"
                         value={this.state.title} 
-                        handleChange={this.handleChange}
+                        handlechange={this.handleChange}
                         label='title'
 
                     />
-                    {this.state.formErrors.length > 0 && (
-                        <span className="errorMessage">{this.state.formErrors.reportOutline}</span>
-                    )}
+                  
                     <FormArea
                         name='reportOutline'
                         type="text"
                         value={this.state.reportOutline} 
-                        handleChange={this.handleChange}
+                        handlechange={this.handleChange}
                     />
-                    {this.state.formErrors.length > 0 && (
-                        <span className="errorMessage">{this.state.formErrors.category}</span>
-                    )}
+                  
                     <select className='category'
                         name='category'
                         type="text"
-                        handleChange={this.handleChange}
                         onChange={this.handleChange}
                         value={this.state.category} 
                         label='category'
@@ -137,13 +80,12 @@ class CreateReport extends React.Component {
                         <option className='categories' value='BehindTheBall'>Behind The Ball</option>
                         <option className='categories' value='CrimsonCannon'>Crimson Cannon</option>
                     </select>
-                    {this.state.formErrors.length > 0 && (
-                        <span className="errorMessage">{this.state.formErrors.report}</span>)}
+                    
                     <FormArea
                         name='report'
                         type="text"
                         value={this.state.report} 
-                        handleChange={this.handleChange}
+                        handlechange={this.handleChange}
                         label='report'
                     />
 

@@ -45,14 +45,14 @@ class Login extends React.Component {
                         name='email'
                         type="email"
                         value={this.state.email} required
-                        handleChange={this.handleChange}
+                        handlechange={this.handleChange}
                         label='email'
                     />
                     <FormInput
                         name='password'
                         type="password"
                         value={this.state.password} required
-                        handleChange={this.handleChange}
+                        handlechange={this.handleChange}
                         label='password'
                     />
                     <div className='button'>
